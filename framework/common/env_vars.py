@@ -1,18 +1,18 @@
 import os
 from typing import Optional
 
-# env1 = os.environ.get('RUN_HEADLESS')
+env1 = os.environ.get('RUN_HEADLESS')
 
 
 def should_run_headless() -> bool:
     """
     Checks if Chrome should run in headless mode or not.
     """
-    return bool(_get_env_var("RUN_HEADLESS") == "True")
+    return bool(_get_env_var(env1) == "True")
 
 
 
-def _get_env_var(name: str, default: str = ""):
+def _get_env_var(name, default: str = ""):
     """
     Gets the value of an environment variable. If the environment variable does not exist, it throws a ValueError.
     :param name: The name of the environment variable to fetch.
