@@ -1,6 +1,11 @@
 pipeline {
 
-    agent { dockerfile true }
+    agent { dockerfile {
+            filename 'Docker'
+            dir 'build'
+            label 'my_app'
+        }
+    }
 
     environment {
         HEADLESS = '-e RUN_HEADLESS=True'
