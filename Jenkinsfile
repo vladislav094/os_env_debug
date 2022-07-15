@@ -9,6 +9,7 @@ pipeline {
 
     stages {
         stage("create docker image")
+            {
             steps {
                 echo "========== start building image =========="
                 sh "python --version"
@@ -20,6 +21,7 @@ pipeline {
 //                 sh "docker run --rm -e RUN_HEADLESS=True web_test pytest -s tests/positive_tests/test_making_orders_positive.py"
 //                 sh "docker run --rm -e RUN_HEADLESS=True web_test pytest -s tests/positive_tests/test_search_module_operation.py"
 //                 sh "docker run --rm -e RUN_HEADLESS=True web_test pytest -s tests/positive_tests/test_registration_and_authorization_positive.py"
+            }
         }
     }
 }
