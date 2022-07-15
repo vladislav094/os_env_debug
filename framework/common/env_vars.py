@@ -8,7 +8,7 @@ def should_run_headless() -> bool:
     """
     Checks if Chrome should run in headless mode or not.
     """
-    return bool(_get_env_var(env1) == "True")
+    return bool(_get_env_var("RUN_HEADLESS") == "True")
 
 
 
