@@ -3,12 +3,14 @@ import os
 import pytest
 from framework.features.automationpractice.automationpractice_app import AutomationpracticeApp
 from framework.features.automationpractice.data.data_user_for_registration import DataUserForRegistration
+env1 = os.environ.get('RUN_HEADLESS')
+
 
 @pytest.mark.usefixtures("set_up_webdriver")
 class TestAuthorizationRegistrationNegative:
 	def test_authorization_with_invalid_credentials_negative(self):
 		automation_practice = AutomationpracticeApp(self.driver)
-		print(os.environ)
+		print(env1)
 		sign_in = automation_practice.sign_in_page
 		automation_practice.go_to("index.php?controller=authentication&back=my-account")
 		sign_in.authorization_in_account()
