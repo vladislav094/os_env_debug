@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        dockerfile true
+        dockerfile {
+            customWorkspace '/test'
+            filename 'Dockerfile'
+        }
     }
 
     environment {
