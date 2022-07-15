@@ -1,6 +1,6 @@
 pipeline {
 
-    agent any
+    agent { dockerfile true }
 
     environment {
         HEADLESS = '-e RUN_HEADLESS=True'
@@ -8,9 +8,10 @@ pipeline {
     }
 
     stages {
-        stage("create docker image") {
-            agent { dockerfile true }
-             }
+        stage("create docker image")
+//         {
+//             agent { dockerfile true }
+//              }
             steps {
                 echo "========== start building image =========="
                 sh "python --version"
