@@ -20,7 +20,7 @@ def _get_env_var(name, default: str = "True"):
     :param default: Option for setting a default value to return if the env variable is not found.
     :return: The value of an environment variable.
     """
-    print(env1)
+    # print(env1)
     if name not in os.environ and not default:
         raise ValueError(f"The {name} environment variable has not been set.")
     return os.getenv(name, default)
