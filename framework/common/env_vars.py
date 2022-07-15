@@ -3,6 +3,7 @@ from typing import Optional
 
 env1 = os.environ.get('RUN_HEADLESS')
 
+en2 = 'True'
 
 def should_run_headless() -> bool:
     """
@@ -13,7 +14,7 @@ def should_run_headless() -> bool:
 
 
 
-def _get_env_var(name, default: str = "True"):
+def _get_env_var(name, default: str = ""):
     """
     Gets the value of an environment variable. If the environment variable does not exist, it throws a ValueError.
     :param name: The name of the environment variable to fetch.
