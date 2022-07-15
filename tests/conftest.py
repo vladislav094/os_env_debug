@@ -41,6 +41,7 @@ def get_webdriver(_get_chrome_options):
 
 @pytest.fixture
 def set_up_webdriver(request, get_webdriver):
+
     driver = get_webdriver
     if request.cls is not None:
         request.cls.driver = driver
