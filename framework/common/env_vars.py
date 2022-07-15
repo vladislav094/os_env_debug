@@ -1,12 +1,15 @@
 import os
 from typing import Optional
 
+# env1 = os.environ.get('RUN_HEADLESS')
+
 
 def should_run_headless() -> bool:
     """
     Checks if Chrome should run in headless mode or not.
     """
     return bool(_get_env_var("RUN_HEADLESS") == "True")
+
 
 
 def _get_env_var(name: str, default: str = ""):
