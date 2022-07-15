@@ -9,9 +9,6 @@ pipeline {
 
     stages {
         stage("create docker image")
-//         {
-//             agent { dockerfile true }
-//              }
             steps {
                 echo "========== start building image =========="
                 sh "python --version"
