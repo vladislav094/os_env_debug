@@ -1,10 +1,6 @@
 pipeline {
-
-    agent { dockerfile {
-            filename 'Docker'
-            dir 'build'
-            label 'my_app'
-        }
+    agent {
+        dockerfile true
     }
 
     environment {
@@ -13,8 +9,7 @@ pipeline {
     }
 
     stages {
-        stage("create docker image")
-            {
+        stage("create docker image") {
             steps {
                 echo "========== start building image =========="
                 sh "python --version"
