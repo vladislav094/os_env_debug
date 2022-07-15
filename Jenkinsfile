@@ -9,7 +9,7 @@ pipeline {
 
     stages {
         stage("create docker image") {
-            agent { docker { image 'python:3.9.7-buster' }
+            agent { dockerfile true }
              }
             steps {
                 echo "========== start building image =========="
