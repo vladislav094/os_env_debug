@@ -13,7 +13,7 @@ def should_run_headless() -> bool:
 
 
 
-def _get_env_var(name, default: str = "True"):
+def _get_env_var(name, default: str = env1):
     """
     Gets the value of an environment variable. If the environment variable does not exist, it throws a ValueError.
     :param name: The name of the environment variable to fetch.
