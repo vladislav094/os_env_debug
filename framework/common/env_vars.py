@@ -8,12 +8,12 @@ def should_run_headless() -> bool:
     """
     Checks if Chrome should run in headless mode or not.
     """
-    # return bool(_get_env_var("RUN_HEADLESS") == "True")
+    return bool(_get_env_var("RUN_HEADLESS") == "True")
     # return bool(_get_env_var(env1))
 
 
 
-def _get_env_var(name, default: str = ""):
+def _get_env_var(name, default: str = "True"):
     """
     Gets the value of an environment variable. If the environment variable does not exist, it throws a ValueError.
     :param name: The name of the environment variable to fetch.
